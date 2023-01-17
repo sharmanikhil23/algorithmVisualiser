@@ -1,0 +1,56 @@
+@import "./color";
+
+#form-area {
+  width: 100%;
+  height: 30rem;
+  #form {
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      div {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        label {
+          font-size: 2rem;
+          padding: 1rem;
+          margin: auto 1rem;
+        }
+        button {
+          display: block;
+          margin: auto 1rem;
+          padding: 0.5rem 1rem;
+          font-size: 2rem;
+          cursor: pointer;
+          &:hover {
+            background-color: $header-backGround-color;
+            color: $header-color;
+          }
+        }
+        input {
+          display: inline-block;
+          padding: 0.3rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #form {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #form {
+    width: 95% !important;
+  }
+}

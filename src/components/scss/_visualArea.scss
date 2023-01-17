@@ -1,0 +1,49 @@
+#visualAreaStarting {
+  width: 100%;
+  max-height: 50vh;
+}
+
+#visualArea {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+#visualAreaStart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.visual {
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  border-left: 0.2px solid black;
+  border-right: 0.2px solid black;
+  border-top: 0.2px solid black;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  background-color: red;
+  content: " ";
+  box-shadow: 2px 2px 4px #000000;
+  transition: height 0.5s ease-in-out, background-color 0.2s;
+}
+
+.visual-Focus {
+  background-color: yellow;
+  transition: height 1s ease-in-out, background-color 0.2s;
+}
+
+@media screen and (max-width: 992px) {
+  #visualArea {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #visualArea {
+    width: 95%;
+  }
+}
