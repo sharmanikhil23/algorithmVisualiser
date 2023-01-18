@@ -6,6 +6,8 @@ export const Form = ({
   handlingSubmit,
   numberOfSeconds,
   setNumberOfSeconds,
+  choice,
+  setChoice,
 }) => {
   return (
     <section id="form">
@@ -41,18 +43,17 @@ export const Form = ({
           ></input>
         </div>
         <div>
-          <label>Sorting Algorithm you want to use</label>
-          <input
-            type="text"
-            name="alg-to-use"
+          <label htmlFor="alg-to-use">Sorting Algorithm you want to use</label>
+          <select
             id="alg-to-use"
-            list="alg"
-            placeholder="Choose"
-          />
-          <datalist id="alg">
-            <option value="bubble-sort" label="Bubble Sort" />
-            <option value="selection-sort" label="Selection Sort" />
-          </datalist>
+            value={choice}
+            onChange={(e) => setChoice(e.target.value)}
+          >
+            <option value="1">Bubble Sort</option>
+            <option value="2">Selection Sort</option>
+            <option value="3">Cyclic Sort</option>
+            <option value="4">Insertion Sort</option>
+          </select>
         </div>
         <div>
           <button type="submit" onClick={(e) => handlingSubmit(e)}>

@@ -1,6 +1,5 @@
 #form-area {
   width: 100%;
-  height: 30rem;
 }
 #form-area #form {
   width: 80%;
@@ -37,7 +36,15 @@
 #form-area #form form div input {
   display: inline-block;
   padding: 0.3rem;
+  font-size: 1rem;
+}
+#form-area #form form div select {
   font-size: 1.3rem;
+  padding: 0.3rem;
+}
+#form-area #form form div select option {
+  font-size: 1.3rem;
+  padding: 0.3rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -83,6 +90,10 @@
   content: " ";
   box-shadow: 2px 2px 4px #000000;
   transition: height 0.5s ease-in-out, background-color 0.2s;
+}
+
+.pink {
+  background-color: pink;
 }
 
 .visual-Focus {
@@ -178,20 +189,17 @@ body #div {
   #heading {
     width: 90%;
   }
-  *,
-::after,
-::before {
-    font-size: 8px;
-  }
 }
 @media screen and (max-width: 700px) {
   #heading {
     width: 95%;
   }
+}
+@media screen and (max-width: 400px) {
   *,
 ::after,
 ::before {
-    font-size: 7px;
+    font-size: 8px;
   }
 }
 @media screen and (max-width: 992px) {

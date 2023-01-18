@@ -1,3 +1,5 @@
+import { sleep } from "./handlingSort";
+
 export const bubbleSort = async (elements, setElements, numberOfSeconds) => {
   let elementsDiv = document.getElementsByClassName("visual");
   let temp = elements;
@@ -11,16 +13,12 @@ export const bubbleSort = async (elements, setElements, numberOfSeconds) => {
         elementsDiv[j].classList.add("visual-Focus");
         elementsDiv[j + 1].style.height = temp[j + 1] + "px";
         elementsDiv[j + 1].classList.add("visual-Focus");
-        await sleep(numberOfSeconds * 100);
+        await sleep(numberOfSeconds);
         elementsDiv[j].classList.remove("visual-Focus");
         elementsDiv[j + 1].classList.remove("visual-Focus");
       }
     }
-    await sleep(numberOfSeconds * 100);
+    await sleep(numberOfSeconds);
   }
   setElements([...temp]);
 };
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}

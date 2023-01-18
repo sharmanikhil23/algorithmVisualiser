@@ -16,10 +16,11 @@ export const App = () => {
   const [elements, setElements] = useState([]);
   const [numberOfElements, setNumberOfElements] = useState(5);
   const [numberOfSeconds, setNumberOfSeconds] = useState(5);
+  const [choice, setChoice] = useState(0);
 
   const handlingSubmit = (e) => {
     e.preventDefault();
-    handling(elements, setElements, e, numberOfSeconds);
+    handling(elements, setElements, e, numberOfSeconds, choice);
   };
 
   useEffect(() => {
@@ -44,6 +45,8 @@ export const App = () => {
           handlingSubmit={handlingSubmit}
           numberOfSeconds={numberOfSeconds}
           setNumberOfSeconds={setNumberOfSeconds}
+          choice={choice}
+          setChoice={setChoice}
         ></Form>
       </section>
       {
