@@ -16,7 +16,7 @@ export const App = () => {
   const [elements, setElements] = useState([]);
   const [numberOfElements, setNumberOfElements] = useState(5);
   const [numberOfSeconds, setNumberOfSeconds] = useState(5);
-  const [choice, setChoice] = useState(0);
+  const [choice, setChoice] = useState(1);
 
   const handlingSubmit = (e) => {
     e.preventDefault();

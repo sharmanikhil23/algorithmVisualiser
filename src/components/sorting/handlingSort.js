@@ -3,6 +3,7 @@ import { bubbleSort } from "./bubbleSort";
 import { selectionSort } from "./selectionSort";
 
 export const handling = (elements, setElements, e, numberOfSeconds, choice) => {
+  console.log(choice);
   if (choice === 1) {
     bubbleSort(elements, setElements, numberOfSeconds);
   } else {
